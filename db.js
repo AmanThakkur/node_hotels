@@ -1,4 +1,10 @@
 const mongoose = require ('mongoose')
+mongoose.connect("your-mongodb-uri", {
+  tlsAllowInvalidCertificates: true,
+  ssl: true,
+  tlsCAFile: "/path/to/ca.pem",
+});
+
 require("dotenv").config();
 // Define the MongoDB Connetion URL
 
